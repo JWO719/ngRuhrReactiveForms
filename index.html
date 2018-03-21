@@ -1,49 +1,155 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>Reactive Forms</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Reactive Forms</h1>
+			</section>
+			<section>
+				<div style="float:left; width:50%; position:relative">
+					<img src="./assets/20170824_090510.jpg" style="width:100%;">
+				</div>
+				<div style="float:left; width:50%; position:relative">
+					<span>Jan-Niklas Wortmann</span>
+					<br>
+					<br>
+					<span>Consultant @ OPITZ CONSULTING</span>
+					<br>
+					<br>
+					<span style="display: inline-block;" class="fragment fade-in">RxJS Learning Team</span>
+					<div style="margin-top:45%" class="fragment fade-in">
+						<i class="fab fa-twitter" style="float:left; margin-left: 50px"></i>
+						<span>@niklas_wortmann</span>
+					</div>
+					<div class="fragment fade-in">
+						<i class="fab fa-github" style="float:left;  margin-left: 50px"></i>
+						<span>JWO719</span>
+					</div>
+				</div>
+			</section>
+			<section>
+				<section>
+					<h1>Basics</h1>
+					<a target="_blank" href="https://stackblitz.com/edit/angular-pgjawe">hey look at me</a>
+				</section>
+				<section>
+					<img src="./assets/module.png" style="width:100%;">
+				</section>
+				<section>
+					<img src="./assets/init.png" style="width:100%;">
+				</section>
+				<section>
+					<img src="./assets/htmlForm.png" style="width:100%;">
+				</section>
+			</section>
+			<section>
+				<img src="https://media.giphy.com/media/Al6rBxuf5dbfG/giphy.gif" style="width:100%;">
+			</section>
+			<section>
+				<h2>What will I talk about?</h2>
+				<ul>
+					<li>Custom Validation</li>
+					<li>Dynamic Forms</li>
+				</ul>
+			</section>
+			<section>
+				<img src="https://media.giphy.com/media/26DOs997h6fgsCthu/giphy.gif" style="width:100%;">
+			</section>
+			<section>
+				<section>
+					<h2>Custom Validation</h2>
+					<img src="./assets/validatorsClass.png" style="width:100%;">
+				</section>
+				<section>
+					<h2>Example App</h2>
+					<a href="https://stackblitz.com/edit/angular-qlazad?file=app%2Fapp.module.ts" target="_blank">here</a>
+				</section>
+				<section>
+					<img src="./assets/validator.png">
+				</section>
+				<section>
+					<h2>Important!</h2>
+					<ul>
+						<li>
+							Use Higher Order Function for Dependency Injection
+						</li>
+						<li>
+							Returns null, Promise, Observable
+						</li>
+						<li>Mind Status PENDING</li>
+						<li>use Class/ Directive to be agnostic</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Dynamic Forms</h2>
+					<a href="https://stackblitz.com/edit/angular-tmoo4y" target="_blank">Click Here</a>
+				</section>
+				<section>
+					<img src="./assets/baseClass.png">
+				</section>
+				<section>
+					<img src="./assets/dynamicComponent.png">
+				</section>
+				<section>
+					<img src="./assets/dynamicHtml.png">
+				</section>
+				<section>
+					<img src="./assets/dynamicService.png">
+				</section>
+			</section>
+			<section>
+				<img src="https://media.giphy.com/media/2WihL51C6Ge5HLXpWY/giphy.gif" width="100%">
+			</section>
+			<section>
+				<img src="https://media.giphy.com/media/W6hcbqOZ00QhO/giphy.gif" width="100%">
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
 </html>
